@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+:root {
+  --color-primary: #e3e1e6;
+  --color-secondary: #f9f4d7;
+  --linear-bg: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  --text-primary: #121212;
+  --text-secondary: #f9f9f9;
+  --bg-color: #e3e1e6;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+p {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 48px;
+}
+h3 {
+  font-size: 40px;
+  font-weight: 400;
+}
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+section {
+  padding: 92px 0 120px 0;
+}
+
+.max-width {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px 0 100px;
+}
+.margin-left {
+  max-width: 1440px;
+  margin-left: calc((100vw - (1440px - 180px)) / 2);
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+}
+.btn--primary {
+  background-color: var(--color-secondary);
+  color: var(--text-primary);
+}
+
+/* navigation */
+.holistic-nav {
+  background-color: var(--color-primary);
+  height: 78px;
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.holistic-nav .flex {
+  align-items: center;
+}
+.holistic-nav .link-box {
+  margin-left: auto;
+}
+.holistic-nav a {
+  margin-right: 37px;
+}
+/* navigation end */
+
+/* header */
+.holistic-header {
+  background-image: var(--linear-bg), url("/assets/img/home-page/home-hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 245px 0 288px 0;
+  color: var(--text-secondary);
+}
+.holistic-header .content-box {
+  max-width: 630px;
+  margin-right: auto;
+}
+.holistic-header h1 {
+  margin: 14px auto 24px auto;
+}
+.holistic-header p {
+  margin-bottom: 45px;
+}
+/* header end */
+
+/* service options */
+.holistic-service {
+  background-color: var(--bg-color);
+}
+.holistic-service .grid {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 44px;
+  row-gap: 44px;
+}
+.holistic-service .grid-box {
+  height: 434px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.holistic-service h3 {
+  margin: 20px 0;
+}
+.holistic-service p {
+  margin-bottom: 20px;
+}
+/* holistic service end */
+
+/* holistic healing start */
+.holistic-healing .text-box {
+  max-width: 616px;
+  margin-right: auto;
+}
+.holistic-healing h2 {
+  margin: 12px 0 24px 0;
+}
+.holistic-healing p {
+  margin-bottom: 45px;
+}
+/* holistic healing end */
+
+/* holistic testimonials start */
+.holistic-testimonials .flex {
+  justify-content: space-between;
+}
+.holistic-testimonials .text-box {
+  margin-bottom: 64px;
+}
+.holistic-testimonials .text-box p {
+  font-weight: 700;
+}
+.holistic-testimonials .slider {
+  text-align: start;
+  display: flex;
+  min-height: 240px;
+}
+.holistic-testimonials .testimonial {
+  padding: 45px 24px;
+  max-width: 376px;
+  width: 100%;
+  background: #f9f4d7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-right: 40px;
+}
+.holistic-testimonials .testimonial img {
+  margin-bottom: 24px;
+}
+
+ul.slick-dots {
+}
+
+ul.slick-dots button {
+  background-color: #e1d8cc !important;
+  border-radius: 100%;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: #000;
+  background-color: black;
+}
+.slick-dots li button:focus:before,
+.slick-dots li button:hover:before {
+  opacity: 0.75;
+}
+.slick-dots li button:before {
+  font-family: slick;
+  font-size: 0px !important;
+  content: "";
+  width: 100% !important;
+  height: 100% !important;
+  background-color: #e1d8cc;
+  border-radius: 100%;
+}
+/* holistic testimonial end */
+
+/* holisticv-contact */
+.holistic-contact {
+}
+.holistic-contact h2 {
+  margin: 14px 0 24px 0;
+}
+.holistic-contact p {
+  max-width: 531px;
+}
+.holistic-contact .flex {
+  margin-top: 64px;
+  justify-content: space-between;
+}
+.contact-form {
+  flex: 1;
+  margin-right: 69px;
+  background-color: transparent;
+}
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.form-flex {
+  display: flex;
+  margin-bottom: 29px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 165.5%; /* 29.79px */
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #121212;
+  border-radius: 0px;
+  outline: none;
+  background-color: transparent;
+}
+
+.interested {
+  color: #000;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.location {
+  flex: 0.5;
+  padding-left: 20px;
+  border-left: 1px solid #ccc;
+  height: 100%;
+  align-self: center;
+  max-width: 274px;
+}
+
+.location a {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 34px;
+}
+
+.address {
+  margin-top: 10px;
+  margin-bottom: 34px;
+  color: #8c8c8c;
+}
+
+.contact-number {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.contact-number::before {
+  content: url(asset/img/contactus/phone-call-icon.svg);
+  margin-right: 14px;
+  vertical-align: middle;
+}
