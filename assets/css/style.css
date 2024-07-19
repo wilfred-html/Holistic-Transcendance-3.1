@@ -16,26 +16,6 @@ html {
   font-size: 62.5%; /* 10px */
 }
 
-/* Medium screens */
-@media (max-width: 1024px) {
-  html {
-      font-size: 56.25%; /* 9px */
-  }
-}
-
-/* Small screens */
-@media (max-width: 768px) {
-  html {
-      font-size: 50%; /* 8px */
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 480px) {
-  html {
-      font-size: 43.75%; /* 7px */
-  }
-}
 
 
 :root {
@@ -52,9 +32,7 @@ a {
   color: currentColor;
 }
 
-a span {
-  font-size: 16px;
-}
+
 
 p {
   font-size: 18px;
