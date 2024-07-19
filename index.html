@@ -15,21 +15,32 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
     />
-
-    >
   </head>
   <body>
     <nav class="holistic-nav">
       <div class="max-width">
         <div class="flex">
-          <img src="assets/svg/nav-logo.svg" alt="logo" />
-
+          <a href="/" class="nav-logo">
+            <img src="assets/svg/nav-logo.svg" alt="Business Logo" />
+          </a>
           <div class="link-box">
-            <a href="#" class="links">Home</a>
-            <a href="#" class="links">About</a>
-            <a href="#" class="links">Services</a>
-            <a href="#" class="btn btn--primary">Get In Touch</a>
+            <a href="index.html" class="links">Home</a>
+            <a href="about.html" class="links">About</a>
+            <div class="links link-list">
+              <span class="dropdown">Services</span>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="links">Life Activation</a></li>
+                <li><a href="#" class="links">Healing Modalities</a></li>
+                <li><a href="#" class="links">PSYCH-K®</a></li>
+                <li><a href="#" class="links">Reiki</a></li>
+              </ul>
+            </div>
+            <a href="contact.html" class="btn btn--primary">Get In Touch</a>
           </div>
+
+          <figure class="burger-menu">
+            <img src="assets/svg/burger-menu.svg" alt="" />
+          </figure>
         </div>
       </div>
     </nav>
@@ -49,7 +60,9 @@
             <a href="#" class="btn btn--primary">Learn More</a>
           </div>
 
-          <img src="assets/svg/full-logo.svg" alt="Full Logo" />
+          <div class="img-box">
+            <img src="assets/svg/full-logo.svg" alt="Full Logo" />
+          </div>
         </div>
       </div>
     </header>
@@ -224,8 +237,6 @@
               </div>
             </div>
 
-
-            
             <div class="form-group full-width">
               <label for="message">Your Message</label>
               <textarea id="message" name="message" rows="4"></textarea>
@@ -233,21 +244,52 @@
             <button class="btn btn--primary" type="submit">Send Message</button>
           </form>
 
-          <div class="location">
-            <p><strong>Info</strong></p>
-            <a class="email" href="mailto:+27217629996"
-              >shev@holistictranscendence.co.za</a
-            >
+          <div class="information">
+            <h3>Info</h3>
+            <a class="email btn--icon" href="mailto:+27217629996">
+              <img src="assets/svg/mail.svg" alt="Email icon" />
+              <span>shev@holistictranscendence.co.za</span>
+            </a>
 
-            <a href="">@holistic_trancendance</a>
+            <a href="#" class="btn--icon">
+              <img src="assets/svg/instagram.svg" alt="instagram icon" />
+              <span>@holistic_trancendance</span>
+            </a>
 
-            <a class="contact-number" href="tel:+27217629996"
-              >+27 83 380 1684</a
-            >
+            <a class="btn--icon" href="tel:+27217629996">
+              <img src="assets/svg/phone.svg" alt="phone icon" />
+              <span>+27 83 380 1684</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
+
+    <footer class="holistic-footer">
+      <div class="max-width">
+        <div class="flex">
+          <div class="top-left">
+            <img src="assets/svg/footer-logo.png" alt="footer logo" />
+            <img
+              src="assets/svg/slogan-logo.svg"
+              alt="unlock transform Transcend"
+            />
+          </div>
+
+          <div class="top-right">
+            <a href="#" class="links">About Us</a>
+            <a href="#" class="links">Services</a>
+            <a href="#" class="links">Contact us</a>
+          </div>
+        </div>
+
+        <div class="flex">
+          <p>© 2023 Holistic Transcendence. All rights reserved.</p>
+
+          <a href="#">powered by vexel</a>
+        </div>
+      </div>
+    </footer>
 
     <script
       type="text/javascript"
@@ -258,19 +300,48 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     ></script>
     <script type="text/javascript">
-      $(document).ready(function () {
-        $(".slider").slick({
-          infinite: true,
-          slidesToShow: 1,
-          centered: true,
-          slidesToScroll: 1,
-          autoplay: true,
-          dots: true,
-          autoplaySpeed: 4000,
-          variableWidth: true,
-          arrows: false,
-        });
-      });
+     $(document).ready(function () {
+  function initializeSlick(variableWidth) {
+    $(".slider").slick({
+      infinite: true,
+      slidesToShow: 1,
+      centered: true,
+      slidesToScroll: 1,
+      autoplay: true,
+      dots: true,
+      autoplaySpeed: 4000,
+      variableWidth: variableWidth,
+      arrows: false,
+    });
+  }
+
+  // Initialize the slider with variableWidth: true
+  initializeSlick(true);
+
+  // Function to check the window width and update the slider settings
+  function updateSlider() {
+    if ($(window).width() <= 1024) {
+      if ($(".slider").hasClass('slick-initialized')) {
+        $(".slider").slick('unslick');
+      }
+      initializeSlick(false);
+    } else {
+      if ($(".slider").hasClass('slick-initialized')) {
+        $(".slider").slick('unslick');
+      }
+      initializeSlick(true);
+    }
+  }
+
+  // Call updateSlider on window resize
+  $(window).resize(function () {
+    updateSlider();
+  });
+
+  // Initial check
+  updateSlider();
+});
+
     </script>
   </body>
 </html>
