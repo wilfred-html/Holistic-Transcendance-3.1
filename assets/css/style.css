@@ -9,10 +9,8 @@
 
 body {
   background-color: #f9f9f9;
+  padding-top: 78px;
 }
-
-
-
 
 :root {
   --color-primary: #e3e1e6;
@@ -28,8 +26,6 @@ a {
   color: currentColor;
   font-size: 16px;
 }
-
-
 
 p {
   font-size: 18px;
@@ -56,6 +52,35 @@ h4 {
   text-transform: capitalize;
 }
 
+@media (max-width: 523px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+    font-weight: 400;
+  }
+  h4 {
+    font-size: 16px;}
+}
+@media (max-width: 375px) {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+    font-weight: 400;
+  }
+  h4 {
+    font-size: 16px;}
+}
+
 section {
   padding: 92px 0 120px 0;
 }
@@ -71,6 +96,16 @@ section {
     padding: 0 50px 0 50px;
   }
 }
+@media (max-width: 1024px) {
+  .max-width {
+    padding: 0 50px 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  .max-width {
+    padding: 0 24px 0 24px;
+  }
+}
 .margin-left {
   max-width: 1440px;
   margin-left: calc((100vw - (1440px - 200px)) / 2);
@@ -80,6 +115,12 @@ section {
   .margin-left {
     margin: 0;
     margin: 0 50px 0 50px;
+  }
+}
+@media (max-width: 768px) {
+  .margin-left {
+    margin: 0;
+    margin: 0 24px 0 50px;
   }
 }
 
@@ -197,29 +238,31 @@ section {
 /* navigation end */
 
 /* header */
-.holistic-header {
-  background-image: var(--linear-bg), url("/assets/img/home-page/home-hero.png");
+
+header {
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 245px 0 288px 0;
+  padding-top: 212px;
+  padding-bottom: 120px;
+  min-height: 752px;
   color: var(--text-secondary);
 }
-.holistic-header .flex {
+header .flex {
   align-items: center;
   justify-content: space-between;
 }
-.holistic-header .content-box {
+header .content-box {
   max-width: 630px;
   margin-right: 88px;
   flex: 1;
 }
-.holistic-header h1 {
+header h1 {
   margin: 14px auto 24px auto;
 }
-.holistic-header p {
+header p {
   margin-bottom: 45px;
 }
-.holistic-header .img-box {
+header .img-box {
   max-width: 343.94px;
   width: 100%;
   flex: 0.5;
@@ -233,14 +276,31 @@ section {
 }
 
 @media (max-width: 1024px) {
-  .holistic-header .flex {
+  header{
+    padding-top: 92px;
+    padding-bottom: 120px;
+  }
+  header .flex {
     flex-direction: column-reverse;
     align-items: start;
   }
-  .holistic-header .img-box {
+  header .img-box {
     margin-bottom: 64px;
     max-width: 200px;
   }
+}
+
+@media (max-width: 768px) {
+  header{
+    padding-top: 92px;
+    padding-bottom: 120px;
+  }
+}
+
+
+/* Home Header */
+.home-header {
+  background-image: var(--linear-bg), url("/assets/img/home-page/home-hero.png");
 }
 /* header end */
 
@@ -254,7 +314,7 @@ section {
   row-gap: 44px;
 }
 .holistic-service .grid-box {
-  height: 434px;
+  min-height: 434px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   padding: 20px;
@@ -513,4 +573,74 @@ ul.slick-dots button {
     align-items: start;
     padding-top: 32px;
   }
+}
+
+/* About Us Page --- header*/
+.about-header {
+  background-image: var(--linear-bg), url("/assets/img/home-page/home-hero.png");
+}
+.about-header .content-box {
+  max-width: 687px;
+}
+.about-header p {
+  max-width: 383px;
+}
+/* Header end */
+
+/* holistic empowering */
+.holistic-empowering {
+}
+.holistic-empowering .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+.holistic-empowering .img-box {
+  text-align: center;
+  margin-right: 44px;
+}
+.holistic-empowering figcaption {
+  font-size: 28px;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 14px;
+}
+.holistic-empowering .text-box {
+  max-width: 495px;
+}
+.holistic-empowering h2 {
+  margin-bottom: 27px;
+}
+
+@media (max-width: 1024px) {
+}
+/* holistic empowering  end*/
+
+/* holisrtic */
+.holistic-goals {
+}
+.holistic-goals .flex {
+  justify-content: space-between;
+}
+.holistic-goals .top-left {
+  display: flex;
+}
+.holistic-goals .text-box {
+  max-width: 295px;
+}
+.holistic-goals .text-box h2 {
+  margin-bottom: 27px;
+}
+.holistic-goals .text-box:not(:last-child) {
+  margin-right: 47px;
+}
+.holistic-goals .top-right {
+  align-self: flex-end;
+}
+.holistic-goals .content-box {
+  margin-top: 56px;
+  justify-content: space-between;
+}
+.holistic-goals .img-box:not(:last-child) {
+  max-width: 273px;
+  margin-right: 47px;
 }
