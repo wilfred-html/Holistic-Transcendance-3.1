@@ -64,7 +64,8 @@ h4 {
     font-weight: 400;
   }
   h4 {
-    font-size: 16px;}
+    font-size: 16px;
+  }
 }
 @media (max-width: 375px) {
   h1 {
@@ -78,7 +79,8 @@ h4 {
     font-weight: 400;
   }
   h4 {
-    font-size: 16px;}
+    font-size: 16px;
+  }
 }
 
 section {
@@ -276,7 +278,7 @@ header .img-box {
 }
 
 @media (max-width: 1024px) {
-  header{
+  header {
     padding-top: 92px;
     padding-bottom: 120px;
   }
@@ -291,12 +293,11 @@ header .img-box {
 }
 
 @media (max-width: 768px) {
-  header{
+  header {
     padding-top: 92px;
     padding-bottom: 120px;
   }
 }
-
 
 /* Home Header */
 .home-header {
@@ -643,4 +644,56 @@ ul.slick-dots button {
 .holistic-goals .img-box:not(:last-child) {
   max-width: 273px;
   margin-right: 47px;
+}
+/* holistic goals end */
+
+/* holistic breakdown */
+.holistic-breakdown .grid {
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 28px;
+  row-gap: 52px;
+}
+.holistic-breakdown .text-box {
+  margin-bottom: 64px;
+}
+.holistic-breakdown h2 {
+  margin-bottom: 27px;
+}
+
+.holistic-breakdown .grid-box {
+  background-color: #f9f4d7;
+  min-height: 250px;
+  border-radius: 20px;
+  padding: 21px 34px;
+  text-align: center;
+}
+.holistic-breakdown .grid-box span {
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.holistic-breakdown span {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  display: block;
+  text-align: center;
+}
+
+.holistic-breakdown .bottom-right {
+ width: max-content;
+ margin-top: 64px;
+ display: flex;
+ flex-direction: column;
+ align-items: end;
+ justify-content: end;
+ margin-left: 50%;
+ transform: translateX(-50%);
+}
+
+.holistic-breakdown .bottom-right a{
+  margin-top: 45px;
 }
