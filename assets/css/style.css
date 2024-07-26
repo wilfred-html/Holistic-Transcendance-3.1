@@ -258,7 +258,8 @@ img {
   margin-bottom: 0;
 }
 
-.burger-menu, .dropdown-menu-nav {
+.burger-menu,
+.dropdown-menu-nav {
   display: none;
 }
 
@@ -302,7 +303,6 @@ img {
   padding: 10px 0px;
   border-bottom: 1px solid lightgray;
 }
-
 
 /* navigation end */
 
@@ -782,10 +782,18 @@ ul.slick-dots button {
 }
 
 @media (max-width: 1024px) {
+  .holistic-empowering .flex {
+    flex-direction: column;
+  }
+
+  .holistic-empowering .img-box {
+    margin: 0;
+    margin-bottom: 64px;
+  }
 }
 /* holistic empowering  end*/
 
-/* holisrtic */
+/* holistic goals */
 .holistic-goals {
 }
 .holistic-goals .flex {
@@ -810,9 +818,42 @@ ul.slick-dots button {
   margin-top: 56px;
   justify-content: space-between;
 }
-.holistic-goals .img-box:not(:last-child) {
+.holistic-goals .img-box {
   max-width: 273px;
+  width: 100%;
+}
+.holistic-goals .img-box:not(:last-child) {
   margin-right: 47px;
+}
+
+@media (max-width: 1024px) {
+  .holistic-goals .flex {
+    flex-direction: column;
+  }
+  .holistic-goals .top-left:not(:last-child) {
+    margin-bottom: 45px;
+  }
+  .holistic-goals .top-left {
+    flex-direction: column;
+  }
+  .holistic-goals .text-box {
+    max-width: 100%;
+    width: 100%;
+  }
+  .holistic-goals .text-box:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  .holistic-goals .top-right {
+    align-self: start;
+  }
+
+  .content-box {
+    /* background-color: red; */
+  }
+
+  .holistic-goals .img-box {
+    margin-bottom: 32px;
+  }
 }
 /* holistic goals end */
 
@@ -850,6 +891,7 @@ ul.slick-dots button {
   font-family: "Playfair Display", serif;
   display: block;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .holistic-breakdown .bottom-right {
