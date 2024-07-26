@@ -30,21 +30,24 @@
               <span class="dropdown">Services</span>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="life-activation.html" class="links">Life Activation</a>
+                  <a href="life-activation.html" class="links"
+                    >Life Activation</a
+                  >
                 </li>
 
                 <li>
-                  <a href="healing-modalities.html" class="links">Healing Modalities</a>
+                  <a href="healing-modalities.html" class="links"
+                    >Healing Modalities</a
+                  >
                 </li>
-                
+
                 <li>
                   <a href="reiki.html" class="links">Reiki</a>
                 </li>
-                
+
                 <li>
                   <a href="psych-k.html" class="links">PSYCH-K®</a>
                 </li>
-
               </ul>
             </div>
             <a href="contact.html" class="btn btn--primary">Get In Touch</a>
@@ -56,6 +59,21 @@
         </div>
       </div>
     </nav>
+
+    <div class="dropdown-menu-nav">
+      <div class="max-width">
+        <div class="link-box">
+          <a href="index.html" class="links">Home</a>
+          <a href="about.html" class="links">About</a>
+          <span class="dropdown">Services</span>
+          <a href="life-activation.html" class="links">Life Activation</a>
+          <a href="healing-modalities.html" class="links">Healing Modalities</a>
+          <a href="reiki.html" class="links">Reiki</a>
+          <a href="psych-k.html" class="links">PSYCH-K®</a>
+        </div>
+      </div>
+    </div>
+    <script src="assets/src/main.js"></script>
 
     <header class="home-header">
       <div class="max-width">
@@ -284,9 +302,9 @@
             <img src="assets/svg/footer-logo.png" alt="footer logo" />
             <div class="slogan-text">
               <h4>Unlock</h4>
-              <img src="assets/svg/Ellipse.svg" alt="Ellipse">
+              <img src="assets/svg/Ellipse.svg" alt="Ellipse" />
               <h4>Transform</h4>
-              <img src="assets/svg/Ellipse.svg" alt="Ellipse">
+              <img src="assets/svg/Ellipse.svg" alt="Ellipse" />
               <h4>Transcend</h4>
             </div>
           </div>
@@ -314,49 +332,51 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     ></script>
+
     <script type="text/javascript">
-     $(document).ready(function () {
-  function initializeSlick(variableWidth) {
-    $(".slider").slick({
-      infinite: true,
-      slidesToShow: 1,
-      centered: true,
-      slidesToScroll: 1,
-      autoplay: true,
-      dots: true,
-      autoplaySpeed: 4000,
-      variableWidth: variableWidth,
-      arrows: false,
-    });
-  }
+      $(document).ready(function () {
+        function initializeSlick(variableWidth) {
+          $(".slider").slick({
+            infinite: true,
+            slidesToShow: 1,
+            centered: true,
+            slidesToScroll: 1,
+            autoplay: true,
+            dots: true,
+            autoplaySpeed: 4000,
+            variableWidth: variableWidth,
+            arrows: false,
+          });
+        }
 
-  // Initialize the slider with variableWidth: true
-  initializeSlick(true);
+        // Initialize the slider with variableWidth: true
+        initializeSlick(true);
 
-  // Function to check the window width and update the slider settings
-  function updateSlider() {
-    if ($(window).width() <= 1024) {
-      if ($(".slider").hasClass('slick-initialized')) {
-        $(".slider").slick('unslick');
-      }
-      initializeSlick(false);
-    } else {
-      if ($(".slider").hasClass('slick-initialized')) {
-        $(".slider").slick('unslick');
-      }
-      initializeSlick(true);
-    }
-  }
+        // Function to check the window width and update the slider settings
+        function updateSlider() {
+          if ($(window).width() <= 1024) {
+            if ($(".slider").hasClass("slick-initialized")) {
+              $(".slider").slick("unslick");
+            }
+            initializeSlick(false);
+          } else {
+            if ($(".slider").hasClass("slick-initialized")) {
+              $(".slider").slick("unslick");
+            }
+            initializeSlick(true);
+          }
+        }
 
-  // Call updateSlider on window resize
-  $(window).resize(function () {
-    updateSlider();
-  });
+        // Call updateSlider on window resize
+        $(window).resize(function () {
+          updateSlider();
+        });
 
-  // Initial check
-  updateSlider();
-});
-
+        // Initial check
+        updateSlider();
+      });
     </script>
+
+    
   </body>
 </html>

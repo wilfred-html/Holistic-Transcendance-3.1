@@ -258,7 +258,7 @@ img {
   margin-bottom: 0;
 }
 
-.burger-menu {
+.burger-menu, .dropdown-menu-nav {
   display: none;
 }
 
@@ -270,6 +270,40 @@ img {
     display: block;
   }
 }
+
+.dropdown-menu-nav {
+  position: fixed;
+  right: 0;
+  top: 78px;
+  z-index: 100;
+  background-color: #f8f8f8;
+  border-bottom-left-radius: 20px;
+  display: none; /* Initially hidden */
+}
+
+.dropdown-menu-nav.visible {
+  display: block; /* Show when the 'visible' class is added */
+}
+
+.dropdown-menu-nav .link-box {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.dropdown-menu-nav .link-box span,
+.dropdown-menu-nav .link-box a {
+  color: #121211;
+  margin-bottom: 24px;
+  font-size: 20px;
+  padding: 10px 0px;
+  border-bottom: 1px solid lightgray;
+}
+
+
 /* navigation end */
 
 /* header */
@@ -1009,15 +1043,15 @@ ul.slick-dots button {
 }
 
 /* holistic reiki benefits  */
-.holistic-benefits .text-box:not(:last-child){
+.holistic-benefits .text-box:not(:last-child) {
   margin-right: 40px;
 }
-.holistic-benefits .text-box li:not(:last-child){
+.holistic-benefits .text-box li:not(:last-child) {
   margin-bottom: 16px;
 }
 
 @media (max-width: 768px) {
-  .holistic-benefits .text-box:not(:last-child){
+  .holistic-benefits .text-box:not(:last-child) {
     margin: 0;
     margin-bottom: 16px;
   }
