@@ -27,6 +27,34 @@ a {
   font-size: 16px;
 }
 
+.text-box ul {
+  list-style: none;
+}
+
+.text-box ul li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.text-box ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #e1d8cc;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+@supports (list-style-position: outside) {
+  ul {
+    list-style-position: outside;
+  }
+}
+
 p {
   font-size: 18px;
 }
@@ -132,6 +160,11 @@ section {
 
 .grid {
   display: grid;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .btn {
@@ -287,8 +320,11 @@ header .img-box {
     align-items: start;
   }
   header .img-box {
-    margin-bottom: 64px;
+    margin-bottom: 32px;
     max-width: 200px;
+  }
+  header .content-box {
+    margin: 0;
   }
 }
 
@@ -545,11 +581,10 @@ ul.slick-dots button {
   .information {
     width: 100%;
     text-align: center;
-
   }
 
   .information h3 {
-    margin-top: 32px ;
+    margin-top: 32px;
     font-size: 40px !important;
     margin-bottom: 54px !important;
   }
@@ -562,10 +597,9 @@ ul.slick-dots button {
     margin-top: 32px;
   }
   .information span {
-  margin: 0;
-  margin-top: 12px;
+    margin: 0;
+    margin-top: 12px;
   }
- 
 }
 
 /* holistic footer */
@@ -797,4 +831,231 @@ ul.slick-dots button {
 
 .holistic-breakdown .bottom-right a {
   margin-top: 45px;
+}
+/* About us End */
+
+/* Life Activation - START */
+.holistic-life-activation {
+}
+
+.holistic-life-activation .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.holistic-life-activation .img-box {
+  max-width: 657px;
+  width: 100%;
+  margin-right: 88px;
+}
+
+.holistic-life-activation .text-box {
+  max-width: 434px;
+}
+.holistic-life-activation h2 {
+  margin-bottom: 24px;
+}
+.holistic-life-activation p {
+  margin-bottom: 32px;
+}
+.holistic-life-activation li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+  .holistic-life-activation .flex {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .holistic-life-activation .img-box {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 64px;
+  }
+}
+
+/* Holistic Benefits */
+.holistic-benefits {
+  background-color: #f8f8f8;
+}
+.holistic-benefits h2 {
+  margin-bottom: 64px;
+}
+.holistic-benefits .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+.holistic-benefits .content-box {
+  display: flex;
+  margin-right: 88px;
+}
+.holistic-benefits .box {
+  max-width: 362px;
+}
+.holistic-benefits .box:not(:last-child) {
+  margin-right: 57px;
+}
+.holistic-benefits h4 {
+  margin: 24px 0;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.holistic-benefits p {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .holistic-benefits .flex {
+    flex-direction: column;
+    align-items: start;
+  }
+  .holistic-benefits .content-box {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .holistic-benefits .box:not(:last-child) {
+    margin: 0;
+    margin-bottom: 57px;
+  }
+
+  .holistic-benefits .img-box {
+    margin-top: 88px;
+    align-self: center;
+  }
+}
+
+/* Healing Modalities page START */
+.holistic-healing-modalities {
+}
+
+.holistic-healing-modalities .img-box {
+  max-width: 507px;
+  width: 100%;
+}
+.holistic-healing-modalities .flex {
+  justify-content: space-between;
+}
+.holistic-healing-modalities .flex > :first-child {
+  margin-right: 64px;
+}
+.holistic-healing-modalities .text-box {
+  max-width: 520px;
+}
+.holistic-healing-modalities p {
+  margin-top: 24px;
+}
+
+@media (max-width: 1024px) {
+  .holistic-healing-modalities .flex-col {
+    flex-direction: column;
+  }
+  .holistic-healing-modalities .flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+  .holistic-healing-modalities .flex > :first-child {
+    margin: 0;
+  }
+  .holistic-healing-modalities .img-box {
+    max-width: 100%;
+    width: 100%;
+  }
+  .holistic-healing-modalities .flex-col .img-box,
+  .holistic-healing-modalities .flex-col-reverse .img-box {
+    margin-bottom: 32px;
+  }
+}
+
+/* Holistic Reiki Page */
+.holistic-reiki {
+  background-color: #ffff;
+  color: #121212;
+}
+.holistic-reiki .flex {
+  justify-content: space-between;
+  align-items: center;
+}
+.holistic-reiki .img-box {
+  max-width: 507px;
+  width: 100%;
+  margin-right: 64px;
+}
+.holistic-reiki .text-box {
+  max-width: 588px;
+  width: 100%;
+}
+.holistic-reiki .text-box p {
+  margin-top: 24px;
+}
+.holistic-reiki .text-box h4 {
+  margin: 24px 0;
+}
+.holistic-reiki .text-box li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+  .holistic-reiki .flex {
+    flex-direction: column;
+    align-items: start;
+  }
+  .holistic-reiki .img-box {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 64px;
+  }
+}
+
+/* holistic reiki benefits  */
+.holistic-benefits .text-box:not(:last-child){
+  margin-right: 40px;
+}
+.holistic-benefits .text-box li:not(:last-child){
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .holistic-benefits .text-box:not(:last-child){
+    margin: 0;
+    margin-bottom: 16px;
+  }
+}
+
+/* holistic psych-k benefits  */
+.holistic-psych-k {
+  background-color: #fff;
+}
+.holistic-psych-k .flex {
+  justify-content: space-between;
+}
+.holistic-psych-k .flex > :first-child {
+  margin-right: 64px;
+}
+.holistic-psych-k .text-box {
+  max-width: 588px;
+}
+.holistic-psych-k p {
+  margin-top: 24px;
+}
+
+@media (max-width: 1024px) {
+  .holistic-psych-k .flex-col {
+    flex-direction: column;
+  }
+  .holistic-psych-k .flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+  .holistic-psych-k .flex > :first-child {
+    margin: 0;
+  }
+  .holistic-psych-k .img-box {
+    max-width: 100%;
+    width: 100%;
+  }
+  .holistic-psych-k .flex-col .img-box,
+  .holistic-psych-k .flex-col-reverse .img-box {
+    margin-bottom: 32px;
+  }
 }
