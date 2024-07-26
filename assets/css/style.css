@@ -247,6 +247,11 @@ img {
   padding: 0 20px;
 }
 
+
+.holistic-nav .dropdown-menu li a{
+  display: block;
+}
+
 .holistic-nav .dropdown-menu li:hover {
   background-color: rgba(0, 0, 0, 0.6);
   color: var(--text-secondary);
