@@ -115,6 +115,13 @@ section {
   padding: 92px 0 120px 0;
 }
 
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0 88px 0;
+  }
+  
+}
+
 .max-width {
   max-width: 1440px;
   margin: 0 auto;
@@ -371,6 +378,10 @@ header .img-box {
   header {
     padding-top: 92px;
     padding-bottom: 120px;
+  }
+
+  header .flex {
+    align-items: center;
   }
 }
 
@@ -731,7 +742,6 @@ ul.slick-dots button {
 
 @media (max-width: 764px) {
   .holistic-footer .flex:first-child {
-    flex-direction: column;
     align-items: center;
     margin: 0;
   }
@@ -772,6 +782,7 @@ ul.slick-dots button {
 
   .holistic-footer .flex:last-child {
     flex-direction: column-reverse;
+    text-align: center;
   }
 
   .holistic-footer .flex:last-child p {
@@ -1132,7 +1143,7 @@ ul.slick-dots button {
   align-items: center;
 }
 .holistic-reiki .img-box {
-  max-width: 507px;
+  /* max-width: 507px; */
   width: 100%;
   margin-right: 64px;
 }
